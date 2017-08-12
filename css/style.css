@@ -1,0 +1,386 @@
+* {
+		padding:0 ;margin: 0;
+	}
+	body {
+		min-width: 1200px;
+		min-height: 600px;
+		font-family: 'WenQuanYi Micro Hei', Simsun, sans-serif;
+	}
+
+	.main {
+		width: 1200px;
+		height: 600px;
+		background: url('../img/bg.jpg');
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+	}
+	/* 粽子盒子，所有元件都在这 */
+	.c_zongzi_box {
+		width: 312px;
+		height: 305px;
+		position: absolute;
+		left: 700px;
+		top: 184px;
+	}
+	.c_zongzi_boxrock{
+		-webkit-animation: rock 1s infinite;
+				animation: rock 1s infinite;
+	}
+	@-webkit-keyframes rock {
+		0% {-webkit-transform:rotate(0deg);
+					transform:rotate(0deg);	}
+		10% {-webkit-transform:rotate(3deg);
+					transform:rotate(3deg);	}
+		20% {-webkit-transform:rotate(-3deg);
+					transform:rotate(-3deg);	}
+		30% {-webkit-transform:rotate(2deg);
+					transform:rotate(2deg);	}
+		40% {-webkit-transform:rotate(-2deg);
+					transform:rotate(-2deg);	}
+		50% {-webkit-transform:rotate(1deg);
+					transform:rotate(1deg);	}
+		60% {-webkit-transform:rotate(-1deg);
+					transform:rotate(-1deg);	}
+		100% {-webkit-transform:rotate(0deg);
+					transform:rotate(0deg);	}
+	}
+	@keyframes rock {
+		0% {-webkit-transform:rotate(0deg);
+					transform:rotate(0deg);	}
+		10% {-webkit-transform:rotate(3deg);
+					transform:rotate(3deg);	}
+		20% {-webkit-transform:rotate(-3deg);
+					transform:rotate(-3deg);	}
+		30% {-webkit-transform:rotate(2deg);
+					transform:rotate(2deg);	}
+		40% {-webkit-transform:rotate(-2deg);
+					transform:rotate(-2deg);	}
+		50% {-webkit-transform:rotate(1deg);
+					transform:rotate(1deg);	}
+		60% {-webkit-transform:rotate(-1deg);
+					transform:rotate(-1deg);	}
+		100% {-webkit-transform:rotate(0deg);
+					transform:rotate(0deg);	}
+	}
+	/* 粽子 */
+	.c_zongzi {
+		width: 312px;
+		height: 305px;
+		background: url('../img/zz.png');
+		transition:all 1s;
+	}
+	.c_zongzi_Out {
+		opacity: 0;
+		transform: scale(.5, .5);
+	}
+	/* 绳子 */
+	.c_shengzi_1 {
+		width: 218px;
+		height: 180px;
+		background: url('../img/line_1.png');
+		position: absolute;
+		left: 10px;
+		top: 120px;
+		z-index: 10;
+		cursor: pointer;
+	}
+	.c_shengzi_2 {
+		width: 219px;
+		height: 159px;
+		background: url('../img/line_2.png');
+		position: absolute;
+		left: 10px;
+		top: 158px;
+	}
+	.c_shengzi_3 {
+		width: 264px;
+		height: 117px;
+		background: url('../img/line_3.png');
+		position: absolute;
+		left: 10px;
+		top: 220px;
+	}
+	.c_shengzi_4 {
+		width: 288px;
+		height: 56px;
+		background: url('../img/line_4.png');
+		position: absolute;
+		left: 10px;
+		top: 290px;
+	}
+	.c_shengzi_0 {display: none;}
+	/* 粽子肉 */
+	.c_zzr {
+		width: 288px;
+		height: 234px;
+		background: url('../img/zzr_1.png') no-repeat;
+		background-size:288px 206px;
+		position: absolute;
+		left: 50px;
+		top: 55px;
+		z-index: 5;
+		opacity: 0;
+		transition: all 1s;
+		transform: scale(.8, .8);
+		transform-origin: center top;
+	}
+	
+	.c_zzr_In {
+		opacity: 1;
+		transform: scale(1, 1);
+	}
+	/* 左叶 */
+	.c_left{
+		opacity: 0;
+		transition: all 1s;
+		width: 114px;
+		height: 266px;
+		background: url('../img/leaf_left.png');
+		position: absolute;
+		left: 0;
+		top: -34px;
+		z-index: 3;
+	}
+	.c_left_In { opacity: 1;
+		transform: rotate(-5deg);
+	}
+	.c_left_Out { opacity: 0; 
+		transform: rotate(-15deg);
+	}
+	/* 右叶 */
+	.c_right{
+		opacity: 0;
+		transition: all 1s;
+		width: 318px;
+		height: 388px;
+		background: url('../img/leaf_right.png');
+		position: absolute;
+		left: 80px;
+		top: -40px;
+		z-index: 5;
+	}
+	.c_right_In { opacity: 1;
+		transform: rotate(5deg);
+	 }
+	.c_right_Out { opacity: 0;
+		transform: rotate(15deg);
+	 }
+	/* 底部 */
+	.c_expand{
+		opacity: 0;
+		transition: all 1s;
+		width: 618px;
+		height: 464px;
+		background: url('../img/leaf_expand.png');
+		position: absolute;
+		left: -150px;
+		top: -45px;
+		z-index: 4;
+	}
+	.c_expand_In {
+		opacity: 1;
+	}
+	/* 文字1 */
+	.c_t1{
+		opacity: 0;
+		transition: all 1s;
+		width: 180px;
+		height: 100px;
+		background: url('../img/t_jixiang.png');
+		position: absolute;
+		left: 50%;
+		top: 60%;
+		margin-left: -70px;
+		margin-top: -50px;
+		z-index: 7;	
+		-webkit-transform: scale(.8, .8);
+				transform: scale(.8, .8);		
+	}
+	/* 文字2 */
+	.c_t2{
+		opacity: 0;
+		transition: all 1s;
+		width: 180px;
+		height: 100px;
+		background: url('../img/t_ruyi.png');
+		position: absolute;
+		left: 50%;
+		top: 60%;
+		margin-left: -70px;
+		margin-top: -50px;
+		z-index: 7;	
+		-webkit-transform: scale(.8, .8);
+				transform: scale(.8, .8);		
+	}
+	.c_t_In {
+		opacity: 1;
+	}
+	/* 祝福语文字 */
+	.text {
+		width: 400px;
+		height: 370px;
+		position: absolute;
+		top: 140px;
+		left: 180px;
+		font-size: 14px;
+		line-height: 20px;
+		color: #333;
+	}
+
+	.text > .caption {
+		width: 400px;
+		height: 240px;
+		background: url('../img/caption.png');
+		opacity: 0;
+		margin-left: 40px;
+		transition: all 1s;
+	}
+	.text > .to {
+		width: 400px;
+		margin-top: 10px;
+		opacity: 0;
+		margin-left: 40px;
+		transition: all 1s .5s;
+	}
+	.text > .msg {
+		width: 400px;
+		margin-top: 10px;
+		opacity: 0;
+		margin-left: 40px;
+		transition: all 1s 1s;
+	}
+	.text > .from {
+		width: 400px;
+		margin-top: 10px;
+		text-align: right;
+		opacity: 0;
+		margin-left: 40px;
+		transition: all 1s 1.5s;
+	}
+	.text_In > .caption,
+	.text_In > .to,
+	.text_In > .msg,
+	.text_In > .from {
+		opacity: 1;
+		margin-left: 0;
+	}
+
+	/* 垂直翻转粽子 */
+	.c_zzr_vertical01 {
+		opacity: 1;
+		transition: all 0s;
+		transform:scale(1, 0.55) translate(-20px, 125px);
+	}
+	.c_zzr_vertical02 {
+		opacity: 1;	
+		transition: all 0s;
+		transform: scale(1, 0.43) translate(-20px, 135px);
+}
+    .c_zzr_vertical03 {
+		opacity: 1;	
+		transition: all 0s;
+		transform: scale(1, 0.3) translate(-20px, 150px);
+}
+	.c_zzr_vertical04 {
+		opacity: 0;
+		transition: all 0s;
+	}
+	.c_zzr_vertical05 {
+		opacity: 1;
+		transition: all 0s;
+		transform-origin: center top;
+		transform: scale(1) translate(-20px, 20px);
+	}
+	.c_zzr_vertical1 {
+		opacity: 1;
+		transition: all 0s;
+		transform-origin: bottom;
+		transform: rotate(180deg) scale(1, 0.45) translate(20px, 220px);
+	}
+	.c_zzr_vertical2 {
+		opacity: 1;	
+		transition: all 0s;
+		transform-origin: bottom;
+		transform: rotate(180deg) scale(1, 0.65) translate(20px, 225px);
+}
+    .c_zzr_vertical3 {
+		opacity: 1;	
+		transition: all 0s;
+		transform-origin: bottom;
+		transform: rotate(180deg) scale(1, 0.85) translate(20px, 235px);
+}
+	.c_zzr_vertical4 {
+		opacity: 1;
+		transition: all 0s;
+		transform-origin: bottom;
+		transform: rotate(180deg) scale(1, 1) translate(20px, 240px);
+	}
+	.c_zzr_vertical5 {
+		opacity: 1;
+		z-index: -1;
+		transition: all 0s;
+		transform-origin: bottom;
+		transform: rotate(180deg) scale(0.8) translate(20px, 200px);
+	}
+
+
+
+	/* 粽子肉的旋转视角 */
+	.c_zzr_view1 {
+		background-image: url('../img/zzr_1.png');
+		transition: all 0s;
+	}
+	.c_zzr_view2 {
+		background-image: url('../img/zzr_2.png');
+		background-size: 288px 234px;
+		transition: all 0s;
+	}
+	.c_zzr_view3 {
+		background-image: url('../img/zzr_3.png') ;
+		background-size: 288px 234px;
+		transition: all 0s;
+	}
+	.c_zzr_view4 {
+		background-image: url('../img/zzr_4.png');
+		background-size: 288px 234px;
+		transition: all 0s;
+	}
+	.c_zzr_view0 {
+		background-image: url('../img/zzr_1.png') ;
+		transition: all 0s;
+	}
+	/* 文字的视角 */
+	.c_t_view1 { transform: scale(0.8, 0.8);
+				transition: all 0s;}
+	.c_t_mirror1 { display: none; transition: all 0s;}
+	.c_t_view2 {
+		transform: scale(0.8, 0.8) rotateY(30deg) translate(-25px, 0) rotate(8deg); 
+		transition: all 0s;
+	}
+	.c_t_mirror2 {
+		transform: scale(0.8, 0.8) rotateY(25deg) translate(70px, 0) rotate(-8deg);
+		transition: all 0s;
+	}
+	.c_t_view3 {
+		transform: scale(0.78, 0.78) rotateY(45deg) translate(-55px, -10px) rotate(18deg); 
+		transition: all 0s;
+	}
+	.c_t_mirror3 {
+		transform: scale(0.78, 0.78) rotateY(40deg) translate(108px, -10px) rotate(-18deg);
+		transition: all 0s;
+	}
+	.c_t_view4 {
+		transform: scale(0.58, 0.58) rotateY(45deg) translate(-130px, -18px) rotate(30deg); 
+		transition: all 0s;
+	}
+	.c_t_mirror4 {
+		transform: scale(0.58, 0.58) rotateY(45deg) translate(235px, -10px) rotate(-28deg);
+		transition: all 0s;
+	}
+
+
+
